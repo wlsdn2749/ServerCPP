@@ -2,7 +2,7 @@
 
 #include "Types.h"
 #include "Allocator.h"
-
+#include <array> 
 #include <vector>
 #include <list>
 #include <queue>
@@ -14,6 +14,8 @@
 #include <map>
 
 using namespace std;
+template<typename Type, uint32 Size>
+using Array = array<Type, Size>;
 
 template<typename Type>
 using Vector = vector<Type, StlAllocator<Type>>;

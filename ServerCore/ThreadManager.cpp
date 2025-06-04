@@ -2,6 +2,8 @@
 #include "ThreadManager.h"
 #include "CoreTLS.h"
 #include "CoreGlobal.h"
+#include "JobQueue.h"
+#include "GlobalQueue.h"
 
 ThreadManager::ThreadManager()
 {
@@ -51,5 +53,28 @@ void ThreadManager::initTLS()
 void ThreadManager::DestroyTLS()
 {
 	// 동적으로 생성되는게 있으면 날려줌.
+}
+
+void ThreadManager::DistributeReservedJobs()
+{
+	const uint64 now = ::GetTickCount64();
+
+	GJobTimer->Distribute(now);
+}
+
+void ThreadManager::DoGlobalQueueWork()
+{
+	while (true)
+	{
+		uint64 now = ::GetTickCount64();
+		if (now > LEndTickCount)
+			break;
+
+		JobQueueRef jobQueue = GGlobalQueue->Pop();
+		if (jobQueue == nullptr)
+			break;
+
+		jobQueue->Execute();
+	}
 }
 

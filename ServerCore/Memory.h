@@ -35,7 +35,7 @@ private:
 template<typename Type, typename... Args> // valid template 인자가 여러개 가능
 Type* xnew(Args&& ...args) // 가변 길이 인자
 {
-	Type* memory = static_cast<Type*>(xxalloc(sizeof(Type)));
+	Type* memory = static_cast<Type*>(PoolAllocator::Alloc(sizeof(Type)));
 
 	// placement new - 메모리 위에다가 생성자 호출!
 	new(memory)Type(std::forward<Args>(args)...); // Args의 완벽한 전달
@@ -47,5 +47,11 @@ template<typename Type>
 void xdelete(Type* obj)
 {
 	obj->~Type(); // obj의 소멸자 호출
-	xxrelease(obj);
+	PoolAllocator::Release(obj);
+}
+
+template<typename Type, typename... Args> // valid template 인자가 여러개 가능
+shared_ptr<Type> MakeShared(Args&&... args)
+{
+	return shared_ptr<Type> { xnew<Type>(std::forward<Args>(args)...), xdelete<Type> };
 }

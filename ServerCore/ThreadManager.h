@@ -20,7 +20,10 @@ public:
 
 	static void initTLS();
 	static void DestroyTLS();
+	static void DistributeReservedJobs();
 
+
+	static void DoGlobalQueueWork();
 private:
 	Mutex						_lock;
 	std::vector<std::thread>	_threads;
