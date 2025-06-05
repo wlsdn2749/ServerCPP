@@ -8,6 +8,7 @@
 #include "SocketUtils.h"
 #include "SendBuffer.h"
 #include "JobTimer.h"
+#include "DBConnectionPool.h"
 
 ThreadManager*			GThreadManager = nullptr;
 DeadLockProfiler*		GDeadLockProfiler = nullptr;
@@ -15,6 +16,7 @@ Memory*					GMemory = nullptr;
 SendBufferManager*		GSendBufferManager = nullptr;
 GlobalQueue*			GGlobalQueue = nullptr;
 JobTimer*				GJobTimer = nullptr;
+DBConnectionPool*		GDBConnectionPool = nullptr;
 
 
 
@@ -29,6 +31,7 @@ public:
 		GDeadLockProfiler = new DeadLockProfiler();
 		GGlobalQueue = new GlobalQueue();
 		GJobTimer = new JobTimer();
+		GDBConnectionPool = new DBConnectionPool();
 		SocketUtils::Init();
 	}
 	~CoreGlobal()
@@ -39,6 +42,7 @@ public:
 		delete GDeadLockProfiler;
 		delete GGlobalQueue;
 		delete GJobTimer;
+		delete GDBConnectionPool;
 		SocketUtils::Clear();
 	}
 private:
