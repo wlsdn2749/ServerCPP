@@ -159,6 +159,7 @@
     <ClInclude Include="Allocator.h" />
     <ClInclude Include="BufferReader.h" />
     <ClInclude Include="BufferWriter.h" />
+    <ClInclude Include="ConsoleLogger.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="CoreGlobal.h" />
     <ClInclude Include="CoreMacro.h" />
@@ -167,6 +168,8 @@
     <ClInclude Include="DBBind.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="DBConnectionPool.h" />
+    <ClInclude Include="DBModel.h" />
+    <ClInclude Include="DBSynchronizer.h" />
     <ClInclude Include="DeadLockProfiler.h" />
     <ClInclude Include="FileUtils.h" />
     <ClInclude Include="GlobalQueue.h" />
@@ -202,12 +205,15 @@
     <ClCompile Include="Allocator.cpp" />
     <ClCompile Include="BufferReader.cpp" />
     <ClCompile Include="BufferWriter.cpp" />
+    <ClCompile Include="ConsoleLogger.cpp" />
     <ClCompile Include="CoreGlobal.cpp" />
     <ClCompile Include="CorePch.cpp" />
     <ClCompile Include="CoreTLS.cpp" />
     <ClCompile Include="DBBind.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="DBConnectionPool.cpp" />
+    <ClCompile Include="DBModel.cpp" />
+    <ClCompile Include="DBSynchronizer.cpp" />
     <ClCompile Include="DeadLockProfiler.cpp" />
     <ClCompile Include="FileUtils.cpp" />
     <ClCompile Include="GlobalQueue.cpp" />
@@ -239,9 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DB_01.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="GameDB.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -7,8 +7,8 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{93ee3bb5-6c7f-4fca-b56d-98c935cc590d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Protocol">
-      <UniqueIdentifier>{0ca26eca-f0b6-49c0-9e20-b162b2b41251}</UniqueIdentifier>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{97a3ec07-7faf-46da-b2ce-c9101f1e2dbf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -21,14 +21,14 @@
     <ClCompile Include="ServerPacketHandler.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="Protocol.pb.cc">
-      <Filter>Main\Protocol</Filter>
+    <ClCompile Include="..\..\..\..\Downloads\Procedure+Generator_소스코드\DummyClient\Enum.pb.cc">
+      <Filter>Protocol</Filter>
     </ClCompile>
-    <ClCompile Include="Enum.pb.cc">
-      <Filter>Main\Protocol</Filter>
+    <ClCompile Include="..\..\..\..\Downloads\Procedure+Generator_소스코드\DummyClient\Protocol.pb.cc">
+      <Filter>Protocol</Filter>
     </ClCompile>
-    <ClCompile Include="Struct.pb.cc">
-      <Filter>Main\Protocol</Filter>
+    <ClCompile Include="..\..\..\..\Downloads\Procedure+Generator_소스코드\DummyClient\Struct.pb.cc">
+      <Filter>Protocol</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,33 +38,19 @@
     <ClInclude Include="ServerPacketHandler.h">
       <Filter>Main</Filter>
     </ClInclude>
-    <ClInclude Include="Protocol.pb.h">
-      <Filter>Main\Protocol</Filter>
+    <ClInclude Include="..\..\..\..\Downloads\Procedure+Generator_소스코드\DummyClient\Enum.pb.h">
+      <Filter>Protocol</Filter>
     </ClInclude>
-    <ClInclude Include="Enum.pb.h">
-      <Filter>Main\Protocol</Filter>
+    <ClInclude Include="..\..\..\..\Downloads\Procedure+Generator_소스코드\DummyClient\Protocol.pb.h">
+      <Filter>Protocol</Filter>
     </ClInclude>
-    <ClInclude Include="Struct.pb.h">
-      <Filter>Main\Protocol</Filter>
+    <ClInclude Include="..\..\..\..\Downloads\Procedure+Generator_소스코드\DummyClient\Struct.pb.h">
+      <Filter>Protocol</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="PDL.xml">
       <Filter>Main</Filter>
     </Xml>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Common\Protobuf\bin\Protocol.proto">
-      <Filter>Main\Protocol</Filter>
-    </None>
-    <None Include="..\Common\Protobuf\bin\Struct.proto">
-      <Filter>Main\Protocol</Filter>
-    </None>
-    <None Include="..\Common\Protobuf\bin\Enum.proto">
-      <Filter>Main\Protocol</Filter>
-    </None>
-    <None Include="..\Common\Protobuf\bin\GenPackets.bat">
-      <Filter>Main\Protocol</Filter>
-    </None>
   </ItemGroup>
 </Project>

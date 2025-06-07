@@ -24,7 +24,7 @@ using namespace std;
 #include "SendBuffer.h"
 #include "Session.h"
 #include "LockQueue.h"
-
+#include "ConsoleLogger.h"
 class Uncopyable
 {
 protected:

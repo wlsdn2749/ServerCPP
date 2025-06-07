@@ -25,6 +25,9 @@
     <Filter Include="Utils\XML">
       <UniqueIdentifier>{b1ae5bd7-84ed-4db9-8ad2-483389de6a48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{a81300cb-fda4-4ff6-812b-f95213cbd13d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CorePch.h">
@@ -148,7 +151,14 @@
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="DBBind.h">
-      <Filter>Job</Filter>
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleLogger.h" />
+    <ClInclude Include="DBSynchronizer.h">
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DBModel.h">
+      <Filter>DB</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -249,15 +259,19 @@
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="DBBind.cpp">
-      <Filter>Job</Filter>
+      <Filter>DB</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleLogger.cpp" />
+    <ClCompile Include="DBModel.cpp">
+      <Filter>DB</Filter>
+    </ClCompile>
+    <ClCompile Include="DBSynchronizer.cpp">
+      <Filter>DB</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="DB_01.sql">
       <Filter>DB</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="GameDB.xml" />
   </ItemGroup>
 </Project>
